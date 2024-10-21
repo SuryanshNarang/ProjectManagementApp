@@ -1,10 +1,12 @@
 "use client";
+import { LockIcon } from "lucide-react";
 import Image from "next/image";
 // in next js we need to add above line for it work.
 import React, { useState } from "react";
 
 const Sidebar = () => {
   // this is representing projects ka dropdown.
+  // these 2 are stored in local state but the sidebar collapse we will be storing in global state so we will use Redux toolkit
   const [showProjects, setShowProjects] = useState(true);
   const [showPriority, setShowPriority] = useState(true);
 
@@ -20,16 +22,23 @@ const Sidebar = () => {
         {/* T{OP} LOGO */}
         <div className="z-50 flex min-h-[56px] w-64 items-center justify-between bg-white px-6 pt-3 dark:bg-black">
           <div className="text-xl font-bold text-gray-800 dark:text-white">
-            EDLIST
+            TIE
           </div>
         </div>
         {/* TEAM */}
         <div className="flex items-center gap-5 border-y-[1.5px] border-gray-200 px-8 py-4 dark:border-gray-700">
           <Image src="/logo.png" alt="Logo" width={40} height={40} />
           <div>
-            <h3 className="text-md font-bold tracking-wide dark:text-gray-200">The Impact Engine</h3>
+            <h3 className="text-md font-bold tracking-wide dark:text-gray-200">
+              The Impact Engine
+            </h3>
+            <div className="mt-1 flex items-start gap-2">
+              <LockIcon className="mt-[0.1rem] h-3 w-3 text-gray-500 dark:text-gray-400" />
+              <p className="text-xs text-gray-500">Private</p>
+            </div>
           </div>
         </div>
+        {/* Navbar links */}
       </div>
     </div>
   );
