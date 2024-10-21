@@ -22,3 +22,9 @@ this is how we use context providers.
  PROBLEM WAS: we cannnout set the layout.tsx as "use client" its's gonna give error for root layout. because over here we want to use global state and once we use the global state in dashboardLAyout this will require useclient which we will do,
  so that's why we wrapped it around DashboardWrapper and write all the logic in dashboardLAyout
  this is the best setup if we want to setup our dashboard with global context or state.
+
+
+
+
+the reason we used "use client" is in dashboardWrapper file
+ // In your example with useEffect, you need to control the dark mode of the application based on the state of isDarkMode. This involves manipulating the DOM, which can only be done on the client side:
