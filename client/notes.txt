@@ -5,3 +5,20 @@ its usded in sidebar collapsing
 we have installed redux-presist just in case we want to store the state in local storage also:
 for ex: if the user set the website into dark mode it carries onto the next session if user closes the website then reloads it: then it will be in dark mode only: that's what 
 REDUX toolkit allows us to do.
+
+
+After redux setup: basically the state folder we need to connect redux with our next app
+we do it byy:
+add it in dashboardWrapper we are gonna add the provider in this file.
+check dashboardWrapper:
+DashboardWrapper Component:
+
+This component is designed to provide a layout that includes the StoreProvider, which integrates Redux for state management. It wraps around the DashboardLayout component, ensuring that all components within this layout have access to the global Redux store.
+this is how we use context providers.
+
+
+
+
+ PROBLEM WAS: we cannnout set the layout.tsx as "use client" its's gonna give error for root layout. because over here we want to use global state and once we use the global state in dashboardLAyout this will require useclient which we will do,
+ so that's why we wrapped it around DashboardWrapper and write all the logic in dashboardLAyout
+ this is the best setup if we want to setup our dashboard with global context or state.
