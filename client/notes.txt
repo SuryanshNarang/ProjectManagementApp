@@ -1,0 +1,7 @@
+adding Redux Toolkit for global state management:
+its usded in sidebar collapsing
+
+
+we have installed redux-presist just in case we want to store the state in local storage also:
+for ex: if the user set the website into dark mode it carries onto the next session if user closes the website then reloads it: then it will be in dark mode only: that's what 
+REDUX toolkit allows us to do.

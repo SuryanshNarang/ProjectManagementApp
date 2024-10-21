@@ -7,6 +7,7 @@ import React, { useState } from "react";
 const Sidebar = () => {
   // this is representing projects ka dropdown.
   // these 2 are stored in local state but the sidebar collapse we will be storing in global state so we will use Redux toolkit
+  // redux toolkit for state management
   const [showProjects, setShowProjects] = useState(true);
   const [showPriority, setShowPriority] = useState(true);
 
