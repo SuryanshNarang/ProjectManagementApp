@@ -20,7 +20,7 @@ export const globalSlice = createSlice({
     setIsDarkMode:(state,action:PayloadAction<boolean>)=>{
         state.isDarkMode = action.payload;
   },
-});
+}});
 
 export const {} = globalSlice.actions;
 

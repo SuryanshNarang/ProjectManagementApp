@@ -1,6 +1,6 @@
 "use client"
 // In your example with useEffect, you need to control the dark mode of the application based on the state of isDarkMode. This involves manipulating the DOM, which can only be done on the client side:
-mport React, { useEffect } from "react";
+import React, { useEffect } from "react";
 import Navbar from "@app/(components)/Navbar"; // Adjust based on actual path
 import Sidebar from "@app/(components)/Sidebar";
 import StoreProvider, { useAppSelector } from "./redux";
@@ -40,11 +40,9 @@ const DashboardWrapper = ({ children }: { children: React.ReactNode }) => {
   // : It manages the global state of your application, ensuring that any component within the DashboardLayout can access the Redux store. Also This keeps the Redux-related logic separate from the UI components, making it easier to manage the application’s state.
   return (
     <StoreProvider>
-      {/* check redux.tsx now our entire application has access to redux */}
-      <DashboardLayout>{children}</DashboardLayout>
-      {/*  It wraps around the DashboardLayout component, ensuring that all components within this layout have access to the global Redux store. */}
-    </StoreProvider>
+    <DashboardLayout>{children}</DashboardLayout>
+  </StoreProvider>
   );
 };
 
-export default DashboardLayout;
+export default DashboardWrapper;
